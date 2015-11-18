@@ -7,7 +7,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
 
-        <receiver android:name=".WidgetProvider" >
+        <receiver android:name=".Provider" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -18,7 +18,7 @@
         </receiver>
 
         <receiver
-            android:name=".WidgetIntentReceiver"
+            android:name=".IntentReceiver"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.mediasmithy.intent.action.UPDATE_WIDGET" />
