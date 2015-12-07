@@ -13,7 +13,7 @@ import static com.mediasmithy.sembus.Utils.WIDGET_UPDATE_ACTION
 class Provider extends AppWidgetProvider {
 
 
-    static def buildButtonPendingIntent(Context context) {
+    static buildButtonPendingIntent(Context context) {
         ++IntentReceiver.clickCountDesc
         ++IntentReceiver.clickCountTitle
 
@@ -25,15 +25,7 @@ class Provider extends AppWidgetProvider {
         getBroadcast context, 0, intent, FLAG_UPDATE_CURRENT
     }
 
-    static def getDesc(Context context) {
-        context.getResources().getStringArray(R.array.bus_schedule)[0]
-    }
-
-    static def getTitle(Context context) {
-        context.getResources().getStringArray(R.array.bus_stops)[0]
-    }
-
-    static def pushWidgetUpdate(Context context, RemoteViews remoteViews) {
+    static pushWidgetUpdate(Context context, RemoteViews remoteViews) {
         def myWidget = new ComponentName(context, Provider)
         def manager = AppWidgetManager.getInstance(context)
         manager.updateAppWidget myWidget, remoteViews
@@ -51,11 +43,11 @@ class Provider extends AppWidgetProvider {
         // register for button event
         remoteViews.setOnClickPendingIntent R.id.schedule, buildButtonPendingIntent(context)
         remoteViews.setOnClickPendingIntent R.id.location, buildButtonPendingIntent(context)
-        remoteViews.setOnClickPendingIntent R.id.next_location, buildButtonPendingIntent(context)
+//        remoteViews.setOnClickPendingIntent R.id.next_location, buildButtonPendingIntent(context)
 
         // updating view with initial data
-        remoteViews.setTextViewText R.id.location, getTitle(context)
-        remoteViews.setTextViewText R.id.schedule, getDesc(context)
+        remoteViews.setTextViewText R.id.location, context.getResources().getString(R.string.app_name)
+        remoteViews.setTextViewText R.id.schedule, context.getResources().getString(R.string.welcome)
 
         // request for widget update
         pushWidgetUpdate context, remoteViews
