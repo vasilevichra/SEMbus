@@ -1,43 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp">
+    android:orientation="vertical">
 
     <Button
-        android:id="@+id/gps_button"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/ic_action_place" />
-
-    <Button
-        android:id="@+id/next_location"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="10dp"
-        android:background="@drawable/ic_action_next_item"
-        android:clickable="true" />
+        android:id="@+id/schedule"
+        style="?android:borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:alpha="0.9"
+        android:background="@color/semrush"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textSize="26sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/location"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@id/next_location"
-        android:layout_toRightOf="@id/gps_button"
-        android:paddingBottom="5dp"
-        android:textSize="15sp"
+        android:layout_height="40dp"
+        android:alpha="0.9"
+        android:background="@color/semrush"
+        android:gravity="center"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/schedule"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/gps_button"
-        android:textSize="20sp" />
-</RelativeLayout>
+</LinearLayout>
