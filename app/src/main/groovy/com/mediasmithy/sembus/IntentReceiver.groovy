@@ -89,6 +89,6 @@ class IntentReceiver extends BroadcastReceiver {
         def nextStopDate = new Date(today.time + Date.parse(format, nextStop).time + offsetInMilliseconds)
         def diff = TimeCategory.minus(nextStopDate, now)
 
-        return "${nextStop} | ${diff.minutes}"
+        return "${nextStop} | ${diff.minutes + 1}"
     }
 }
