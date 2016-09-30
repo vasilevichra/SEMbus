@@ -1,12 +1,13 @@
-package com.mediasmithy.sembus
+package com.semrush.sembus
+
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.widget.RemoteViews
 import groovy.time.TimeCategory
 
-import static com.mediasmithy.sembus.Provider.pushWidgetUpdate
-import static com.mediasmithy.sembus.Utils.WIDGET_UPDATE_ACTION as update
+import static com.semrush.sembus.Provider.pushWidgetUpdate
+import static com.semrush.sembus.Utils.WIDGET_UPDATE_ACTION as update
 import static java.util.Calendar.*
 
 class IntentReceiver extends BroadcastReceiver {

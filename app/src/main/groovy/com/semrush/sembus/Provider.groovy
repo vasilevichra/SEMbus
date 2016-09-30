@@ -1,4 +1,4 @@
-package com.mediasmithy.sembus
+package com.semrush.sembus
 
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
@@ -8,7 +8,7 @@ import android.content.Intent
 import android.widget.RemoteViews
 
 import static android.app.PendingIntent.*
-import static com.mediasmithy.sembus.Utils.WIDGET_UPDATE_ACTION
+import static com.semrush.sembus.Utils.WIDGET_UPDATE_ACTION as update
 
 class Provider extends AppWidgetProvider {
 
@@ -19,7 +19,7 @@ class Provider extends AppWidgetProvider {
 
         // initiate widget update request
         def intent = new Intent()
-        intent.setAction WIDGET_UPDATE_ACTION
+        intent.setAction update
 //        Activity.findViewById(R.id.next_location)
 //        Drawable.setColorFilter(0xffff0000, PorterDuff.Mode.MULTIPLY)
         getBroadcast context, 0, intent, FLAG_UPDATE_CURRENT
