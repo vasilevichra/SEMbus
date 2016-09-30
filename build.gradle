@@ -1,9 +1,30 @@
+ext {
+
+    compileSdkVersion = 22
+    buildToolsVersion = "22.0.1"
+
+}
+
 allprojects {
+
     repositories {
+
         jcenter()
+
     }
+
 }
 
 task clean(type: Delete) {
+
     delete rootProject.buildDir
+
+}
+
+dependencies {}
+
+task wrapper(type: Wrapper) {
+
+    gradleVersion = '3.1'
+
 }
